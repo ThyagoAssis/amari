@@ -1,0 +1,59 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark" [containerInside]="true">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="nav-link waves-light" href="#" style="color: #fff; text-shadow: 0 0 1em #FF7C6C; font-size: larger;">AMARI</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active" *ngIf="!link">
+        <a class="nav-link waves-light" mdbWavesEffect style="font-weight: 500;">Home<span
+            class="sr-only">(current)</span></a>
+      </li>
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown *ngIf="!link">
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect
+          style="font-weight: 500;">
+            Loja<span class=" caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Produtos</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Minha Conta</a>
+          <div class="divider dropdown-divider"></div>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Carrinho</a>
+        </div>
+      </li>
+
+    </ul>
+    <!-- Links -->
+
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link">
+          <mdb-icon fab icon="facebook"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <mdb-icon fab icon="instagram"></mdb-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <div class="btn-group" mdbDropdown>
+            <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+              <a class="dropdown-item" href="#">Entrar</a>
+              <a class="dropdown-item" href="#">Cadastre-se</a>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
